@@ -1,0 +1,19 @@
+.task {
+    width: 100%;
+    /*border: 2px solid black;*/
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.task-content {
+    margin-left: 10px;
+    max-width: 250px;
+    /*border: 2px solid black;*/
+    word-break: break-all;
+}
+
+.box {
+    margin-left: 20px;
+}

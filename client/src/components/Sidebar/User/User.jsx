@@ -1,10 +1,15 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import './User.css'
+import {ModalContext} from "../../../Context";
 
 const User = (props) => {
-    
+
+    const [showModal, setShowModal] = useContext(ModalContext)
+
     function clickHandler() {
         props.setCurrentUser(props.id)
+        setShowModal(true)
+        console.log(`${showModal}`)
     }
 
     return (

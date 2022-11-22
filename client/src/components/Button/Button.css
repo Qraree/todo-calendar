@@ -1,0 +1,51 @@
+.close {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 0;
+    color: #a6a6a6;
+    border-radius: 5px;
+    background-color: white;
+    box-sizing: content-box;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    font-size: 18px;
+}
+
+.close:hover {
+    background-color: #f3f2f2;
+}
+
+.addTask {
+    padding: 7px;
+    border: 0;
+    border-radius: 5px;
+    margin: auto;
+    display: block;
+
+}
+
+.closeTask {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 0;
+    color: #a6a6a6;
+    border-radius: 5px;
+    background-color: white;
+    box-sizing: content-box;
+    margin-right: 10px;
+    margin-left: auto;
+    font-size: 18px;
+}
+
+.closeTask:hover {
+    background-color: #f3f2f2;
+}

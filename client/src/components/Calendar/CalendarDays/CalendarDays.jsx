@@ -33,7 +33,7 @@ const CalendarDays = (props) => {
             {
                 currentDays.map((day) => {
                     return (
-                        <CalendarDay day={day} changeCurrentDay={props.changeCurrentDay}/>
+                        <CalendarDay day={day} changeCurrentDay={props.changeCurrentDay} key={`${day.date}`}/>
                     )
                 })
             }

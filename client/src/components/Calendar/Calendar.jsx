@@ -14,11 +14,10 @@ const Calendar = () => {
 
     return (
         <div>
-            {/*<h1>Calendar</h1>*/}
             <h2>{months[currentDay.getMonth()]} {currentDay.getFullYear()}</h2>
             <div className={"calendar"}>
                 <div className={"calendarHeader"}>
-                    {weekdays.map(weekday => <p>{weekday}</p>)}
+                    {weekdays.map(weekday => <p key={weekday}>{weekday}</p>)}
                 </div>
                 <div className={"calendarBody"}>
                     <CalendarDays day={currentDay} changeCurrentDay={changeCurrentDay} />
