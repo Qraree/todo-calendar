@@ -1,5 +1,10 @@
-const http = require('http')
+const PORT = 5000
+const Application = require('./Application')
+const app = new Application()
+const jsonParser = require('./middlewares/jsonParse')
 const sqlite3 = require('sqlite3').verbose()
+const userRouter = require('./routes/userRoutes')
+
 const db = new sqlite3.Database('./todo.db', sqlite3.OPEN_READWRITE, (err) => {
     if (err) return console.error(err.message)
 })
@@ -8,10 +13,7 @@ let sql;
 // sql = 'CREATE TABLE users(id INTEGER PRIMARY KEY)'
 
 
-const {getAllUsers} = require("./users/usersController");
+app.use(jsonParser)
+app.addRouter(userRouter)
 
-const server = http.createServer((req, res) => {
-    if (req.url === '/users' && req.method === 'GET') {
-       getAllUsers(req, res)
-    }
-})
+app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`))
