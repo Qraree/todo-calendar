@@ -8,8 +8,8 @@ const User = (props) => {
 
     function clickHandler() {
         props.setCurrentUser(props.id)
-        setShowModal(true)
-        console.log(`${showModal}`)
+        setShowModal({...showModal, userId: props.id})
+        console.log(`${showModal.userId}`)
     }
 
     return (
