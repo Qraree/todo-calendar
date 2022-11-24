@@ -7,7 +7,11 @@ import {useState} from "react";
 import {ModalContext} from "./Context";
 
 function App() {
-    const [showModal, setShowModal] = useState(false)
+    const [showModal, setShowModal] = useState({
+        show: false,
+        userId: 1,
+        date: ''
+    })
   return (
       <ModalContext.Provider value={[showModal, setShowModal]}>
         <div className="App">
