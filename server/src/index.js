@@ -4,6 +4,7 @@ const app = new Application()
 const jsonParser = require('./middlewares/jsonParse')
 const urlParser = require('./middlewares/parseURL')
 const userRouter = require('./routes/userRoutes')
+const taskRouter = require('./routes/tasksRoutes')
 const sqlite3 = require('sqlite3').verbose()
 
 const db = new sqlite3.Database('./todo.db', sqlite3.OPEN_READWRITE, (err) => {
@@ -12,6 +13,7 @@ const db = new sqlite3.Database('./todo.db', sqlite3.OPEN_READWRITE, (err) => {
 
 app.use(urlParser('http://localhost:5000'))
 app.use(jsonParser)
+app.addRouter(taskRouter)
 app.addRouter(userRouter)
 
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`))
