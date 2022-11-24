@@ -8,9 +8,9 @@ const Sidebar = () => {
     const [currentUser, setCurrentUser] = useState('')
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch('http://localhost:5000/users')
             .then(response => response.json())
-            .then(data => setUsers(data))
+            .then(data => setUsers(data.data))
     }, [])
 
 
