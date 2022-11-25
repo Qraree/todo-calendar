@@ -31,6 +31,13 @@ const Task = (props) => {
         }
     }
 
+    useEffect(() => {
+        if (props.task.done === 1) {
+            setChecked(true)
+        } else {
+            setChecked(false)
+        }
+    }, [])
     function deleteHandler() {
         fetch(`http://localhost:5000/tasks?id=${props.task.id}`, {
             method: 'DELETE',
@@ -47,8 +54,8 @@ const Task = (props) => {
 
     return (
         <div className={'task'}>
-            <input type={'checkbox'} checked={props.task.done} className={'box'} onChange={checkHandler}/>
-            <div className={'task-content'} style={{textDecoration: props.task.done === 1 ? 'line-through': 'none'}}>{props.task.content}</div>
+            <input type={'checkbox'} checked={checked} className={'box'} onChange={checkHandler}/>
+            <div className={'task-content'} style={{textDecoration: checked ? 'line-through': 'none'}}>{props.task.content}</div>
             <Button className={'closeTask'} onClick={deleteHandler}>x</Button>
         </div>
     );
