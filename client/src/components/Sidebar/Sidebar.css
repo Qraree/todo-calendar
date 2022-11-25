@@ -3,4 +3,22 @@
     width: 400px;
     /*background-color: gainsboro;*/
     border-right: 2px solid gainsboro;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.userList {
+}
+.input-div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.addUserInput {
+    width: 300px;
+    border: 2px solid gainsboro;
+    box-sizing: content-box;
+    margin-left: 10px;
 }
