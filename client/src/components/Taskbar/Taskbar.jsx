@@ -44,24 +44,25 @@ const Taskbar = () => {
         })
             .then(response => response.json())
             .then(data => console.log(data.message))
-        setTask('')
-    }
-
-    function deleteTask(task) {
-        setTaskList(taskList.filter(t => t.id !== task.id))
-    }
-
-    function setCheck(id) {
-
+        setTimeout(() => {
+            setTask('')
+        }, 1000)
+        setTask('Task was added')
     }
 
     return (
         <div className={'taskbar'} style={{left: showModal.show ? '0' : '-400px'}}>
             <Button onClick={showModalHandler} className={'close'}>x</Button>
-            <textarea rows={5} cols={40} value={task} onChange={(e) => inputHandler(e)} className={"input"}/>
+            <textarea
+                rows={5}
+                cols={40}
+                value={task}
+                onChange={(e) => inputHandler(e)}
+                className={"input"}
+                placeholder={'Add new task'}/>
             <Button className={'addTask'} onClick={addTaskHandler}>Add task</Button>
             <div className={'task-list'}>
-                {taskList.map(task => <Task task={task} deleteTask={deleteTask} setCheck={setCheck} key={task.id}/>)}
+                {taskList.map(task => <Task task={task}  key={task.id}/>)}
             </div>
         </div>
     );
