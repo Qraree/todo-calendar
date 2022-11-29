@@ -1,4 +1,4 @@
 # To-Do calendar
 
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/Qraree/Qraree/blob/main/gif_todo.gif)
