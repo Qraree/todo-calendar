@@ -12,6 +12,3 @@ Backend - Библиотека http на node.js
  
  - Для более удобной реализации роутинга был реализован класс **Router** для роутера и абстракция самого приложения в классе **Application**
  - Роутинг осуществлен по типу роутинга на Express
-
-
-![Alt Text](https://github.com/Qraree/Qraree/blob/main/gif_todo.gif)
