@@ -1,7 +1,6 @@
 .taskbar {
     height: 700px;
     width: 400px;
-    /*border: 2px solid black;*/
     border-right: 2px solid gainsboro;
     position: absolute;
     top: 0;
