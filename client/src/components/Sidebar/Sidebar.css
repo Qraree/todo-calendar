@@ -1,7 +1,6 @@
 .sidebar {
     height: 700px;
     width: 400px;
-    /*background-color: gainsboro;*/
     border-right: 2px solid gainsboro;
     display: flex;
     justify-content: space-between;
